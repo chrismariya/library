@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="lib.css">
+</head>
+<body>
+    <body >
+        <div class="l-box">
+            <h1>SignUp</h1> 
+            <table class="table">
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text"></td>
+                </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea rows="3" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="num1"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" id="num2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" class="btn btn-success" onclick="confirm()">Register</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p id="result"></p></td>
+            </tr>
+                </table>
+                </div>
+                <script>
+                    function confirm()
+                    {
+                        var x=parseInt(document.getElementById("num1").value);
+                        var y=parseInt(document.getElementById("num2").value);
+                        if(x==y)
+                        {
+                            console.log("registered");
+                            document.getElementById("result").innerHTML="Registered";
+                        }
+                        else
+                        {
+                            document.getElementById("result").innerHTML="password confirmed incorectly";
+                        }
+                    }
+                </script>
+</body>
+</html>
